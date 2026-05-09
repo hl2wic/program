@@ -1,3 +1,226 @@
-<h1>블로</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아날로그의 숨결, VU 메타</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 리셋 및 전역 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<p>반갑습니다!</p>
+        body {
+            background-color: #1a1714;
+            background-image: radial-gradient(circle at center, #2a2520 0%, #12100e 100%);
+            color: #d8c3a5;
+            font-family: 'Gowun Batang', serif;
+            line-height: 2;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* 레이아웃 컨테이너 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        /* 헤더 섹션 */
+        .header {
+            margin-bottom: 6rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e9d5b0;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(233, 213, 176, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #a89f91;
+            letter-spacing: 1px;
+        }
+
+        /* 본문 섹션 */
+        .section {
+            margin-bottom: 6rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            word-break: keep-all;
+        }
+
+        /* 미디어 요소 컨테이너 (이미지, 동영상) */
+        .media-wrapper {
+            position: relative;
+            margin: 2rem auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.1);
+            background: #000;
+        }
+
+        .media-wrapper img, 
+        .media-wrapper video {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+
+        /* 다운로드 버튼 */
+        .download-wrapper {
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(216, 195, 165, 0.2);
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 1rem 3rem;
+            margin-top: 1.5rem;
+            background-color: transparent;
+            color: #d8c3a5;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 1px solid #d8c3a5;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .btn-download:hover {
+            background-color: #d8c3a5;
+            color: #1a1714;
+            box-shadow: 0 0 20px rgba(216, 195, 165, 0.4);
+        }
+
+        /* 푸터 */
+        .footer {
+            margin-top: 6rem;
+            padding-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #6a645c;
+        }
+
+        /* 반응형 처리 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .section p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header section">
+            <h1>아날로그의 숨결, VU 메타</h1>
+            <p>지나간 시간의 따뜻한 소리를 시각으로 담아내다</p>
+        </header>
+
+        <main>
+            <section class="section">
+                <p>
+                    어느 날 문득 스친 옛 기억에 눈시울이 붉어졌습니다.<br>
+                    '무엇을 만들어 볼까?' 고민하던 찰나,<br>
+                    1970년대 사람들이 귀 기울였던 그 따뜻한 음악과 감성을<br>
+                    눈앞에 시각적으로 피어오르게 해보자 결심하며 이 프로젝트를 시작했습니다.
+                </p>
+                <div class="media-wrapper">
+                    <img src="VU메타 - 진공관 헤드폰 앰프 .png" alt="아날로그 감성의 VU메타와 진공관 앰프">
+                </div>
+            </section>
+
+            <section class="section">
+                <p>
+                    음악에 기대어 가만히 쉬어가는 사람들, 서로의 사랑을 속삭이는 연인들,<br>
+                    정신없이 해맑게 뛰노는 아이들, 그리고 아련한 옛 추억 속에 잠긴 노부부까지.<br>
+                    음악과 함께하는 세상의 모든 이들을 사랑합니다.
+                </p>
+            </section>
+
+            <section class="section">
+                <p>
+                    비록 미천한 재주와 감각일지라도, 제가 할 수 있는 모든 정성을 쏟았습니다.<br>
+                    현대의 기술을 빌려, 그 시절의 아련한 추억과 갬성을 코드로 엮어냈습니다.
+                </p>
+                <div class="media-wrapper">
+                    <video src="음악과 VU메타와 뇌휴식.mp4" controls autoplay muted loop playsinline></video>
+                </div>
+            </section>
+
+            <section class="section download-wrapper">
+                <p>
+                    이 따뜻한 울림을 저 혼자만 간직하기엔 너무 아쉬워<br>
+                    여러분과 함께 나누고자 무료로 배포합니다.<br>
+                    부디 여러분의 공간에서도 아름답게 빛나길 바라며, 많은 사랑 부탁드립니다.<br>
+<br>
+<br>
+		    윈도 컴퓨타 전용이며 혹시 비번을 물어보면 hl2wic 입니다.
+                </p>
+                <a href="VUMeter.zip" download class="btn-download">
+                    무료 다운로드
+                </a>
+            </section>
+        </main>
+
+        <footer class="footer section">
+            <p>© Vintage VU Meter Project. Crafted with love and memories.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
